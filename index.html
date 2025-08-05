@@ -461,6 +461,44 @@
             padding: 40px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             margin-top: 60px;
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: var(--text-color-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+            font-family: var(--nav-font);
+        }
+        
+        .footer-links a:hover {
+            color: var(--nav-link-rollover-color);
+        }
+        
+        .footer-separator {
+            color: var(--text-color-secondary);
+            margin: 0 15px;
+            opacity: 0.5;
+        }
+        
+        .footer-copyright {
+            color: var(--text-color-secondary);
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.8;
+            font-family: var(--nav-font);
         }
         
         /* Responsive Design */
@@ -519,6 +557,26 @@
                 bottom: 15px;
                 font-size: 14px;
                 padding: 8px 16px;
+            }
+            
+            .footer {
+                padding: 30px 0;
+            }
+            
+            .footer-links {
+                margin-bottom: 12px;
+            }
+            
+            .footer-links a {
+                font-size: 13px;
+            }
+            
+            .footer-separator {
+                margin: 0 10px;
+            }
+            
+            .footer-copyright {
+                font-size: 11px;
             }
         }
         
@@ -670,6 +728,20 @@ It's my way of turning thoughts and emotions into something people can feel.
                 <a href="mailto:Info@TwinNoteMusic.com" class="contact-email">Info@TwinNoteMusic.com</a>
             </div>
         </section>
+
+        <!-- Footer -->
+        <footer class="footer fade-in">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://twinnotemusic.com/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+                    <span class="footer-separator">|</span>
+                    <a href="https://twinnotemusic.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    © <span id="current-year">2025</span> Twin Note Music. All rights reserved.
+                </div>
+            </div>
+        </footer>
     </div>
 
     <!-- Enhanced Lightbox -->
@@ -854,6 +926,9 @@ It's my way of turning thoughts and emotions into something people can feel.
 
         // Initialize preloading
         preloadImages();
+        
+        // Set dynamic copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
